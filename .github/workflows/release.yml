@@ -1,0 +1,50 @@
+name: release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: corepack enable
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+      - name: install dependencies
+        run: pnpm install
+      - name: build
+        run: pnpm run build
+      - name: test
+        run: pnpm run test
+      - name: type-check
+        run: pnpm run type-check
+      # This task is temporarily deactivated because the action always writes the entire changelog to the release notes
+      # - name: release
+      #   uses: softprops/action-gh-release@v2
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   with:
+      #     body_path: CHANGELOG.md
+      #     prerelease: ${{ github.ref_name != 'refs/tags/v*.*.*' }}
+      #     draft: false
+      - name: publish
+        run: |
+          input="${{ github.ref_name }}"
+          if [[ $input =~ ^v([0-9]+\.[0-9]+\.[0-9]+)(-([a-zA-Z-]+))? ]]; then
+            version="${BASH_REMATCH[1]}"
+            suffix="${BASH_REMATCH[3]:-latest}"
+          else
+            echo "Error: The input string does not match the expected version pattern." >&2
+            exit 1
+          fi
+          echo "registry=https://registry.npmjs.org" >> ~/.npmrc
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> ~/.npmrc
+          npm publish --access public --tag $suffix

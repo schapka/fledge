@@ -1,0 +1,26 @@
+version: '3'
+
+tasks:
+  release:
+    precondition: git status --porcelain
+    cmds:
+      - npx changelogen --bump
+      - npx prettier --write CHANGELOG.md
+      - git add package.json CHANGELOG.md
+      - git commit -m "v$(node -e "console.log(require('./package.json').version)")"
+      - git tag -a "v$(node -e "console.log(require('./package.json').version)")" -m "v$(node -e "console.log(require('./package.json').version)")"
+      - git push
+      - git push --tags
+    silent: true
+
+  release-next:
+    precondition: git status --porcelain
+    cmds:
+      - npx changelogen --prerelease next --bump
+      - npx prettier --write CHANGELOG.md
+      - git add package.json CHANGELOG.md
+      - git commit -m "v$(node -e "console.log(require('./package.json').version)")"
+      - git tag -a "v$(node -e "console.log(require('./package.json').version)")" -m "v$(node -e "console.log(require('./package.json').version)")"
+      - git push
+      - git push --tags
+    silent: true

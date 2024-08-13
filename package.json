@@ -1,0 +1,72 @@
+{
+  "name": "fledge",
+  "version": "0.0.1",
+  "description": "Project scaffolding",
+  "keywords": [
+    "scaffolding"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/schapka/fledge",
+  "bugs": {
+    "url": "https://github.com/schapka/fledge/issues"
+  },
+  "author": "René Schapka",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/schapka/fledge.git"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/main.d.ts",
+      "import": "./dist/main.mjs",
+      "require": "./dist/main.cjs"
+    }
+  },
+  "bin": {
+    "fledge": "dist/cli.mjs"
+  },
+  "main": "./dist/main.cjs",
+  "module": "./dist/main.mjs",
+  "types": "./dist/main.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "lint": "eslint . --fix && prettier -w .",
+    "type-check": "tsc --noEmit",
+    "test": "vitest --run",
+    "build": "unbuild"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.4.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@eslint/js": "^9.9.0",
+    "@types/eslint__js": "^8.42.3",
+    "@types/node": "^22.4.0",
+    "changelogen": "^0.5.5",
+    "eslint": "^9.9.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^8.1.0",
+    "unbuild": "^2.0.0",
+    "vitest": "^2.0.5"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.7.0",
+    "c12": "^1.11.1",
+    "commander": "^12.1.0",
+    "execa": "^9.3.1",
+    "fast-glob": "^3.3.2",
+    "fastq": "^1.17.1",
+    "isbinaryfile": "^5.0.2",
+    "rc9": "^2.1.2",
+    "scule": "^1.3.0",
+    "zod": "^3.23.8"
+  },
+  "packageManager": "pnpm@9.7.0",
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
