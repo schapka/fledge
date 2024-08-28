@@ -10,9 +10,10 @@ import { write, read, RC } from './core/rc.js';
 import { stackPrompt } from './prompts/stack.js';
 import { secretsPrompt } from './prompts/secrets.js';
 import { getRelativePath, resolveHomeDir } from './utils/fs.js';
+import { showLogo } from './prompts/logo.js';
 
 const program = new Command('fledge');
-const spinner = prompts.spinner();
+let spinner: undefined | ReturnType<(typeof prompts)['spinner']>;
 
 /**
  * Create command
@@ -50,6 +51,9 @@ program
 
     const fledge = new Fledge(source, auth);
 
+    await showLogo();
+
+    spinner = prompts.spinner();
     spinner.start('Loading stacks');
     const stacks = await fledge.getStacks();
     spinner.stop('Stacks loaded');
@@ -118,7 +122,7 @@ cache
  */
 
 program.parseAsync().catch((error) => {
-  spinner.stop();
+  spinner?.stop();
   prompts.cancel(error.toString());
   process.exit(1);
 });
