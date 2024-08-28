@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.0.2-next.6
+
+[compare changes](https://github.com/schapka/fledge/compare/v0.0.2-next.5...v0.0.2-next.6)
+
+### 📖 Documentation
+
+- Format readme ([5efd0ef](https://github.com/schapka/fledge/commit/5efd0ef))
+
+### ❤️ Contributors
+
+- René Schapka <rene.schapka@gmail.com>
+
 ## v0.0.2-next.5
 
 [compare changes](https://github.com/schapka/fledge/compare/v0.0.2-next.4...v0.0.2-next.5)
