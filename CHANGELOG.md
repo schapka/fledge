@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.0.2-next.2
+
+[compare changes](https://github.com/schapka/fledge/compare/v0.0.2-next.1...v0.0.2-next.2)
+
+### 🚀 Enhancements
+
+- Provide json schema for configs ([62fec7c](https://github.com/schapka/fledge/commit/62fec7c))
+
+### ❤️ Contributors
+
+- René Schapka <rene.schapka@gmail.com>
+
 ## v0.0.2-next.1
 
 [compare changes](https://github.com/schapka/fledge/compare/v0.0.2-next.0...v0.0.2-next.1)
