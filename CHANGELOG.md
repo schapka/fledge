@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.0.2-next.5
+
+[compare changes](https://github.com/schapka/fledge/compare/v0.0.2-next.4...v0.0.2-next.5)
+
+### 📖 Documentation
+
+- Fix logo src ([0586ae3](https://github.com/schapka/fledge/commit/0586ae3))
+
+### ❤️ Contributors
+
+- René Schapka <rene.schapka@gmail.com>
+
 ## v0.0.2-next.4
 
 [compare changes](https://github.com/schapka/fledge/compare/v0.0.2-next.3...v0.0.2-next.4)
