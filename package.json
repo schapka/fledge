@@ -31,13 +31,16 @@
   "module": "./dist/main.mjs",
   "types": "./dist/main.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "schema.json",
+    "README.md"
   ],
   "scripts": {
     "lint": "eslint . --fix && prettier -w .",
     "type-check": "tsc --noEmit",
     "test": "vitest --run",
-    "build": "unbuild"
+    "build": "unbuild",
+    "postbuild": "tsx scripts/createSchemaFile.ts"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.4.0",
@@ -48,10 +51,12 @@
     "changelogen": "^0.5.5",
     "eslint": "^9.9.0",
     "prettier": "^3.3.3",
+    "tsx": "^4.19.0",
     "typescript": "^5.5.4",
     "typescript-eslint": "^8.1.0",
     "unbuild": "^2.0.0",
-    "vitest": "^2.0.5"
+    "vitest": "^2.0.5",
+    "zod-to-json-schema": "^3.23.2"
   },
   "dependencies": {
     "@clack/prompts": "^0.7.0",
