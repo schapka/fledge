@@ -151,12 +151,16 @@ export class Fledge {
     const options: DownloadTemplateOptions = {
       dir: targetDirectory,
       install: true,
+      silent: true,
     };
 
     if (this.auth) {
       options.auth = this.auth;
     }
 
+    /**
+     * TODO error handling
+     */
     await downloadTemplate(this.source, options);
 
     return targetDirectory;
