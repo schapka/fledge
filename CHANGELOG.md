@@ -1,5 +1,22 @@
 # Changelog
 
+## v0.0.2-next.1
+
+[compare changes](https://github.com/schapka/fledge/compare/v0.0.2-next.0...v0.0.2-next.1)
+
+### 🚀 Enhancements
+
+- **cli): add create command feat(cli): add config set command feat(cli): add config get command feat(cli:** Add cache clear command ([e0c765e](https://github.com/schapka/fledge/commit/e0c765e))
+- Load external sources (using giget) ([0598f9f](https://github.com/schapka/fledge/commit/0598f9f))
+
+### 🏡 Chore
+
+- Cleanup ([a4a9e97](https://github.com/schapka/fledge/commit/a4a9e97))
+
+### ❤️ Contributors
+
+- René Schapka <rene.schapka@gmail.com>
+
 ## v0.0.2-next.0
 
 ### 🏡 Chore
