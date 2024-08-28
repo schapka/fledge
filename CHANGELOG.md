@@ -1,5 +1,21 @@
 # Changelog
 
+## v0.0.2-next.3
+
+[compare changes](https://github.com/schapka/fledge/compare/v0.0.2-next.2...v0.0.2-next.3)
+
+### 🩹 Fixes
+
+- Install source dependencies silently ([d409ccf](https://github.com/schapka/fledge/commit/d409ccf))
+
+### 🏡 Chore
+
+- Remove schema.json from versioning ([ef6d2fe](https://github.com/schapka/fledge/commit/ef6d2fe))
+
+### ❤️ Contributors
+
+- René Schapka <rene.schapka@gmail.com>
+
 ## v0.0.2-next.2
 
 [compare changes](https://github.com/schapka/fledge/compare/v0.0.2-next.1...v0.0.2-next.2)
