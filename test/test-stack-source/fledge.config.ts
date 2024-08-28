@@ -19,14 +19,6 @@ export default defineConfig({
         },
       ],
       preconditions: [],
-      // scripts: [
-      //   async ({ env, stackOptions, projectTarget: { projectPath } }) => {
-      //     await fs.writeJSON(resolve(projectPath, 'env-and-options.json'), {
-      //       env,
-      //       stackOptions,
-      //     });
-      //   },
-      // ],
       postSetupCommands: ['touch new-file-from-post-setup-command'],
       postSetupInstructions: [],
     },
