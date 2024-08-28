@@ -11,9 +11,9 @@
   - [x] file mode
   - [x] ignore pattern
 - [x] Post setup commands
-- [ ] Post setup instructions
+- [x] Post setup instructions
 - [x] Test setup
-- [ ] CLI
+- [x] CLI
 - [x] Fledge config
 - [x] Stack prompt
 - [x] Secrets prompt

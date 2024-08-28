@@ -6,7 +6,7 @@ const rcSchema = z.object({
   auth: z.string().optional(),
 });
 
-type RC = z.input<typeof rcSchema>;
+export type RC = z.input<typeof rcSchema>;
 
 const rcOptions = { name: '.fledgerc' };
 
