@@ -26,6 +26,9 @@ importers:
       fastq:
         specifier: ^1.17.1
         version: 1.17.1
+      giget:
+        specifier: ^1.2.3
+        version: 1.2.3
       isbinaryfile:
         specifier: ^5.0.2
         version: 5.0.2

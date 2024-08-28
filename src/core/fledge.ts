@@ -2,6 +2,7 @@ import { basename, resolve, dirname } from 'node:path';
 import { createReadStream, createWriteStream } from 'node:fs';
 import { stat, readFile, writeFile, mkdir } from 'node:fs/promises';
 import { pipeline } from 'node:stream/promises';
+import { downloadTemplate, DownloadTemplateOptions } from 'giget';
 import { execa } from 'execa';
 import glob from 'fast-glob';
 import { isBinaryFile } from 'isbinaryfile';
@@ -10,6 +11,7 @@ import { kebabCase } from 'scule';
 import { Config, configSchema } from './schemas.js';
 import { FledgeError, FledgeException } from './exceptions.js';
 import {
+  createdAt,
   exists,
   getAbsolutePath,
   getTempDirectory,
@@ -25,6 +27,7 @@ import {
   getRandomNumericString,
   getUUID,
 } from '../utils/random.js';
+import { getHash } from '../utils/crypto.js';
 import { transformPackageJson } from '../transform/package-json.js';
 
 type CreateProjectOptions = {
@@ -58,8 +61,8 @@ export class Fledge {
   ]);
 
   constructor(
-    private source: string,
-    private auth?: string,
+    private readonly source: string,
+    private readonly auth?: string,
   ) {}
 
   public async createProject(options: CreateProjectOptions) {
@@ -102,17 +105,20 @@ export class Fledge {
   }
 
   public async resolveSource(): Promise<ResolvedSource> {
-    /**
-     * TODO: load external source using https://unjs.io/packages/giget
-     */
-    const sourceDirectory = this.source;
+    const isLocalDirectory = exists(this.source) && isDirectory(this.source);
+
+    const sourceDirectory = isLocalDirectory
+      ? resolve(this.source)
+      : await this.resolveExternalSource();
+
     const { config } = await loadConfig({
-      cwd: this.source,
+      cwd: sourceDirectory,
       name: 'fledge',
       rcFile: false,
       dotenv: false,
       extend: false,
     });
+
     return {
       sourceDirectory,
       /**
@@ -130,6 +136,30 @@ export class Fledge {
   public static clearCache() {
     const cacheDirectory = getTempDirectory('fledge', 'sources');
     remove(cacheDirectory);
+  }
+
+  private async resolveExternalSource(ttl = 10 * 60 * 1000) {
+    const targetDirectory = getTempDirectory('fledge', 'sources', getHash(this.source));
+
+    if (exists(targetDirectory)) {
+      if (createdAt(targetDirectory) > Date.now() - ttl) {
+        return targetDirectory;
+      }
+      remove(targetDirectory);
+    }
+
+    const options: DownloadTemplateOptions = {
+      dir: targetDirectory,
+      install: true,
+    };
+
+    if (this.auth) {
+      options.auth = this.auth;
+    }
+
+    await downloadTemplate(this.source, options);
+
+    return targetDirectory;
   }
 
   private getProjectTarget(projectDirectory: string) {

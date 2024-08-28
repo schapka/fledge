@@ -35,7 +35,7 @@ program
   .option('-a, --auth <auth>', 'Use authorization key')
   .option('-c, --clear-cache', 'Clear stacks source cache')
   .action(async (projectPath: string | undefined, options: CreateOptions) => {
-    const source = options.source || read('source');
+    const source = options.source || read('source') || 'gh:schapka/fledge-stacks';
     const auth = options.auth || read('auth');
 
     if (!source) {
