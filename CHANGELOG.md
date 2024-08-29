@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.0.2-next.7
+
+[compare changes](https://github.com/schapka/fledge/compare/v0.0.2-next.6...v0.0.2-next.7)
+
+### 📖 Documentation
+
+- Update logo ([cc778f5](https://github.com/schapka/fledge/commit/cc778f5))
+
+### ❤️ Contributors
+
+- René Schapka <rene.schapka@gmail.com>
+
 ## v0.0.2-next.6
 
 [compare changes](https://github.com/schapka/fledge/compare/v0.0.2-next.5...v0.0.2-next.6)
