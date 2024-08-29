@@ -5,4 +5,4 @@
 
 <br>
 
-A modern project scaffolding tool.
+Streamline project scaffolding and future-proof your development with flexible, scalable templates.
