@@ -1,5 +1,21 @@
 # Changelog
 
+## v0.0.2-next.9
+
+[compare changes](https://github.com/schapka/fledge/compare/v0.0.2-next.8...v0.0.2-next.9)
+
+### 📖 Documentation
+
+- Update readme ([d215b53](https://github.com/schapka/fledge/commit/d215b53))
+
+### 🏡 Chore
+
+- Remove .DS_Store ([df4fc27](https://github.com/schapka/fledge/commit/df4fc27))
+
+### ❤️ Contributors
+
+- René Schapka <rene.schapka@gmail.com>
+
 ## v0.0.2-next.8
 
 [compare changes](https://github.com/schapka/fledge/compare/v0.0.2-next.7...v0.0.2-next.8)
