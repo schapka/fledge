@@ -1,4 +1,7 @@
-<img src="https://unpkg.com/fledge@latest/docs/fledge.svg" alt="FLEDGE" width="auto" height="200px">
+<picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://unpkg.com/fledge@latest/docs/fledge-white.svg">
+   <img loading="lazy" src="https://unpkg.com/fledge@latest/docs/fledge-black.svg" width="auto" height="200px" alt="FLEDGE">
+</picture>
 
 <br>
 
