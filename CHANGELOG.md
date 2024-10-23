@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.0.2-next.10
+
+[compare changes](https://github.com/schapka/fledge/compare/v0.0.2-next.9...v0.0.2-next.10)
+
+### 🏡 Chore
+
+- Change directory structure ([cca8ff4](https://github.com/schapka/fledge/commit/cca8ff4))
+
+### ❤️ Contributors
+
+- René Schapka <rene.schapka@gmail.com>
+
 ## v0.0.2-next.9
 
 [compare changes](https://github.com/schapka/fledge/compare/v0.0.2-next.8...v0.0.2-next.9)
