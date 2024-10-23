@@ -1,4 +1,4 @@
-name: Deploy docs to pages
+name: deploy docs
 
 on:
   push:
@@ -35,7 +35,7 @@ jobs:
         run: pnpm install
       - name: build
         working-directory: ./docs
-        run: pnpm run docs:build
+        run: pnpm run docs:build --base /fledge/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
