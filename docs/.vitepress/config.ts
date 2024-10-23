@@ -5,13 +5,43 @@ export default defineConfig({
   title: 'Fledge',
   description:
     'Streamline project scaffolding and future-proof your development with flexible, scalable templates.',
+
+  head: [
+    [
+      'link',
+      {
+        rel: 'apple-touch-icon',
+        sizes: '180x180',
+        href: '/fledge/icons/apple-touch-icon.png',
+      },
+    ],
+    [
+      'link',
+      {
+        rel: 'icon',
+        type: 'image/svg+xml',
+        href: '/fledge/icons/favicon.svg',
+      },
+    ],
+    [
+      'link',
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '48x48',
+        href: '/fledge/icons/favicon-48x48.png',
+      },
+    ],
+  ],
+
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
 
     logo: {
-      light: '/assets/fledge-black.svg',
-      dark: '/assets/fledge-white.svg',
+      light: '/images/fledge-black.svg',
+      dark: '/images/fledge-white.svg',
     },
+
     siteTitle: false,
 
     nav: [
