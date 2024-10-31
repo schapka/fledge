@@ -23,6 +23,6 @@
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview",
     "docs:lint": "eslint . --fix && prettier -w .",
-    "docs:generate-types": "node --experimental-strip-types ./scripts/zod-to-types.ts" 
+    "docs:generate-types": "node --experimental-strip-types ./scripts/zod-to-types.ts"
   }
 }
