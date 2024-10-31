@@ -64,7 +64,10 @@ export default defineConfig({
       '/config': [
         {
           text: 'Config',
-          items: [{ text: 'Configuring Fledge', link: '/config/' }],
+          items: [
+            { text: 'Configuring Fledge', link: '/config/' },
+            { text: 'Create Fledge stack(s)', link: '/config/create-stack/' },
+          ],
         },
       ],
     },
