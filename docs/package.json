@@ -11,11 +11,14 @@
   },
   "devDependencies": {
     "vitepress": "^1.4.1",
-    "vue": "^3.5.12"
+    "vue": "^3.5.12",
+    "prettier": "3.3.3",
+    "eslint": "^9.9.0"
   },
   "scripts": {
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
+    "docs:preview": "vitepress preview",
+    "docs:lint": "eslint . --fix && prettier -w ."
   }
 }

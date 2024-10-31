@@ -2,6 +2,6 @@
 outline: deep
 ---
 
-# Guide
+# Configuring Fledge
 
 > TODO

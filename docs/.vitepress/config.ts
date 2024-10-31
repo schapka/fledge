@@ -45,19 +45,27 @@ export default defineConfig({
     siteTitle: false,
 
     nav: [
-      { text: 'Guide', link: '/guide' },
-      { text: 'Config', link: '/config' },
+      { text: 'Guide', link: '/guide/' },
+      { text: 'Config', link: '/config/' },
     ],
 
-    // sidebar: [
-    //   {
-    //     text: 'Examples',
-    //     items: [
-    //       { text: 'Markdown Examples', link: '/markdown-examples' },
-    //       { text: 'Runtime API Examples', link: '/api-examples' },
-    //     ],
-    //   },
-    // ],
+    sidebar: {
+      '/guide': [
+        {
+          text: 'Guide',
+          items: [
+            { text: 'Getting Started', link: '/guide/' },
+            { text: 'CLI', link: '/guide/cli' },
+          ],
+        },
+      ],
+      '/config': [
+        {
+          text: 'Config',
+          items: [{ text: 'Configuring Fledge', link: '/config/' }],
+        },
+      ],
+    },
 
     socialLinks: [{ icon: 'github', link: 'https://github.com/schapka/fledge' }],
   },
