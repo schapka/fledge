@@ -2,7 +2,7 @@
 outline: deep
 ---
 
-# Getting Started
+# Getting Started 
 
 ### 1. Install fledge cli:
 
@@ -33,3 +33,6 @@ fledge config set auth ghp_XXX
 ```bash
 fledge create my-new-project
 ```
+
+
+### Congratulations! You created your first project with fledge! :rocket:
