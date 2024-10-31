@@ -29,8 +29,12 @@ fledge
 ### Example
 
 ```bash
-# TODO
+fledge create my-new-project # or fledge my-new-project -c -s ./my-stack-of-choice
 ```
+
+::: tip
+For detailed guidance on how to configure your own stack, please refer to the [configuration](/config) section.
+:::
 
 ## Fledge Set
 

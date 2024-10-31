@@ -1,0 +1,19 @@
+{
+    stacks: {
+        id: string;
+        name: string;
+        description: string;
+        path: string;
+        ignore?: string[];
+        preconditions?: (string | {
+            sh: string;
+            message?: string | undefined;
+        })[];
+        secrets?: {
+            name: string;
+            hint?: string | undefined;
+        }[];
+        postSetupCommands?: string[];
+        postSetupInstructions?: string[];
+    }[];
+}

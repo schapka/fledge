@@ -34,6 +34,8 @@ export default defineConfig({
     ],
   ],
 
+  srcDir: 'src',
+
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
 
