@@ -3,7 +3,7 @@ import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
   {
-    ignores: ['dist/*', 'docs/*'],
+    ignores: ['.vitepress/cache/*'],
   },
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
