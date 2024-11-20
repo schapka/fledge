@@ -47,15 +47,6 @@ jobs:
           if [ -z "$(git status --porcelain)" ]; then
             echo "no changes"
             exit 0
-          else
-            current_branch=$(git branch --show-current)
-
-            # Check if the branch has an upstream branch
-            if git rev-parse --abbrev-ref --symbolic-full-name @{u} >/dev/null 2>&1; then
-              echo "Branch '$current_branch' has an upstream branch."
-              git commit -m "chore: format"
-              git push
-            else
-              echo "Branch '$current_branch' does not have an upstream branch."
-            fi
           fi
+          git commit -m "chore: format"
+          git push
