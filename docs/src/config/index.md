@@ -53,4 +53,10 @@ This object contains all predefined stack options.
 
 #### Types
 
-<<< @/exports/schema.txt{ts}
+<script lang="ts" setup>
+import { data } from '../../scripts/zod.data.ts'
+</script>
+
+```ts-vue
+{{ data.configSchema }}
+```
