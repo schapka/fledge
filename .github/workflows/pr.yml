@@ -1,0 +1,30 @@
+name: pr
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: corepack enable
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'pnpm'
+      - name: install dependencies
+        run: pnpm install
+      - name: build
+        run: pnpm run build
+      - name: type-check
+        run: pnpm run type-check
+      - name: lint
+        run: pnpm run lint
+      - name: test
+        run: pnpm run test

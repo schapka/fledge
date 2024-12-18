@@ -22,10 +22,12 @@ jobs:
         run: pnpm install
       - name: build
         run: pnpm run build
-      - name: test
-        run: pnpm run test
       - name: type-check
         run: pnpm run type-check
+      - name: lint
+        run: pnpm run lint
+      - name: test
+        run: pnpm run test
       # This task is temporarily deactivated because the action always writes the entire changelog to the release notes
       # - name: release
       #   uses: softprops/action-gh-release@v2
