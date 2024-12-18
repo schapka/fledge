@@ -35,7 +35,7 @@ fledge create my-new-project # or fledge my-new-project -c -s ./my-stack-of-choi
 ```
 
 ::: tip
-For detailed guidance on how to configure your own stack, please refer to the [configuration](/config) section.
+For detailed guidance on how to configure your own stack, please refer to the [configuration](/config/) section.
 :::
 
 ## Fledge Config
