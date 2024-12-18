@@ -37,6 +37,7 @@
     "README.md"
   ],
   "scripts": {
+    "prepare": "husky || true",
     "lint": "eslint . --fix && prettier -w .",
     "type-check": "tsc --noEmit",
     "test": "vitest --run",
@@ -51,6 +52,8 @@
     "@types/node": "^22.4.0",
     "changelogen": "^0.5.5",
     "eslint": "^9.9.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.11",
     "prettier": "^3.3.3",
     "tsx": "^4.19.0",
     "typescript": "^5.5.4",
