@@ -10,12 +10,18 @@
     "node": ">=20.0.0"
   },
   "devDependencies": {
+    "eslint": "^9.9.0",
+    "prettier": "3.3.3",
     "vitepress": "^1.4.1",
-    "vue": "^3.5.12"
+    "vue": "^3.5.12",
+    "typescript": "^5.6.3",
+    "zod": "^3.23.8",
+    "zod-to-ts": "^1.2.0"
   },
   "scripts": {
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
+    "docs:preview": "vitepress preview",
+    "docs:lint": "eslint . --fix && prettier -w ."
   }
 }
