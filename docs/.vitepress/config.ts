@@ -57,7 +57,7 @@ export default defineConfig({
           text: 'Guide',
           items: [
             { text: 'Getting Started', link: '/guide/' },
-            { text: 'CLI', link: '/guide/cli' },
+            { text: 'CLI', link: '/guide/cli/' },
           ],
         },
       ],

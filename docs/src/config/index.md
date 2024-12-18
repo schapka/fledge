@@ -54,7 +54,7 @@ This object contains all predefined stack options.
 #### Types
 
 <script lang="ts" setup>
-import { data } from '../../scripts/zod.data.ts'
+import { data } from '../../data/zod.data.ts'
 </script>
 
 ```ts-vue

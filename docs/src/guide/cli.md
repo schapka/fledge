@@ -4,6 +4,8 @@ outline: deep
 
 # Command Line Interface
 
+## Fledge Create
+
 The `fledge` command is an alias for `fledge create`.
 
 ### Usage
@@ -36,42 +38,44 @@ fledge create my-new-project # or fledge my-new-project -c -s ./my-stack-of-choi
 For detailed guidance on how to configure your own stack, please refer to the [configuration](/config) section.
 :::
 
-## Fledge Set
+## Fledge Config
 
-### Usage
+### Fledge Config Set
+
+#### Usage
 
 ```bash
-fledge set  # Set configuration value
+fledge config set  # Set configuration value
 ```
 
-### Arguments
+#### Arguments
 
 | Arguments |                     |
 | --------- | ------------------- |
 | `<key>`   | Configuration key   |
 | `<value>` | Configuration value |
 
-### Example
+#### Example
 
 ```bash
 fledge set thisKey thatValue
 ```
 
-## Fledge Get
+### Fledge Config Set
 
-### Usage
+#### Usage
 
 ```bash
 fledge get  # Get configuration value
 ```
 
-### Arguments
+#### Arguments
 
 | Arguments |                   |
 | --------- | ----------------- |
 | `<key>`   | Configuration key |
 
-### Example
+#### Example
 
 ```bash
 fledge get thisKey
