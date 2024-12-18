@@ -61,7 +61,7 @@ fledge config set  # Set configuration value
 fledge set thisKey thatValue
 ```
 
-### Fledge Config Set
+### Fledge Config Get
 
 #### Usage
 
