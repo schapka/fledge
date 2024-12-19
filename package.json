@@ -10,8 +10,10 @@
   },
   "scripts": {
     "docs:dev": "pnpm --filter=./fledge-docs run dev",
-    "type-check": "pnpm run -r type-check",
-    "lint": "pnpm run -r lint",
+    "build": "pnpm -r run build",
+    "type-check": "pnpm -r run type-check",
+    "lint": "pnpm -r run lint",
+    "test": "pnpm -r test",
     "prepare": "husky || true"
   },
   "devDependencies": {

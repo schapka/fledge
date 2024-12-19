@@ -2,7 +2,7 @@ import { type ZodTypeAny } from "zod";
 import { defineLoader } from "vitepress";
 import { printNode, zodToTs } from "zod-to-ts";
 
-import { configSchema } from "../../fledge-core/src/core/schemas.js";
+import { configSchema } from "../../fledge/src/core/schemas.js";
 
 type Data = {
   configSchema: string;
@@ -10,7 +10,7 @@ type Data = {
 
 function convertZodSchemaToString(
   schema: ZodTypeAny | typeof configSchema,
-  schemaTitle: string,
+  schemaTitle: string
 ) {
   const { node } = zodToTs(schema as ZodTypeAny, schemaTitle);
   return printNode(node);
