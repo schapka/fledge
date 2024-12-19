@@ -1,5 +1,5 @@
 {
-  "name": "fledge-docs",
+  "name": "@fledge/docs",
   "version": "0.0.0",
   "license": "UNLICENSED",
   "private": true,
@@ -19,9 +19,9 @@
     "zod-to-ts": "^1.2.0"
   },
   "scripts": {
-    "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview",
-    "docs:lint": "eslint . --fix && prettier -w ."
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview",
+    "lint": "eslint . --fix && prettier -w ."
   }
 }

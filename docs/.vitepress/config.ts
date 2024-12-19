@@ -1,77 +1,79 @@
-import { defineConfig } from 'vitepress';
+import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: 'Fledge',
+  title: "Fledge",
   description:
-    'Streamline project scaffolding and future-proof your development with flexible, scalable templates.',
+    "Streamline project scaffolding and future-proof your development with flexible, scalable templates.",
 
   head: [
     [
-      'link',
+      "link",
       {
-        rel: 'apple-touch-icon',
-        sizes: '180x180',
-        href: '/fledge/icons/apple-touch-icon.png',
+        rel: "apple-touch-icon",
+        sizes: "180x180",
+        href: "/fledge/icons/apple-touch-icon.png",
       },
     ],
     [
-      'link',
+      "link",
       {
-        rel: 'icon',
-        type: 'image/svg+xml',
-        href: '/fledge/icons/favicon.svg',
+        rel: "icon",
+        type: "image/svg+xml",
+        href: "/fledge/icons/favicon.svg",
       },
     ],
     [
-      'link',
+      "link",
       {
-        rel: 'icon',
-        type: 'image/png',
-        sizes: '48x48',
-        href: '/fledge/icons/favicon-48x48.png',
+        rel: "icon",
+        type: "image/png",
+        sizes: "48x48",
+        href: "/fledge/icons/favicon-48x48.png",
       },
     ],
   ],
 
-  srcDir: 'src',
+  srcDir: "src",
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
 
     logo: {
-      light: '/images/fledge-black.svg',
-      dark: '/images/fledge-white.svg',
+      light: "/images/fledge-black.svg",
+      dark: "/images/fledge-white.svg",
     },
 
     siteTitle: false,
 
     nav: [
-      { text: 'Guide', link: '/guide/' },
-      { text: 'Config', link: '/config/' },
+      { text: "Guide", link: "/guide/" },
+      { text: "Config", link: "/config/" },
     ],
 
     sidebar: {
-      '/guide': [
+      "/guide": [
         {
-          text: 'Guide',
+          text: "Guide",
           items: [
-            { text: 'Getting Started', link: '/guide/' },
-            { text: 'CLI', link: '/guide/cli/' },
+            { text: "Getting Started", link: "/guide/" },
+            { text: "CLI", link: "/guide/cli/" },
           ],
         },
       ],
-      '/config': [
+      "/config": [
         {
-          text: 'Config',
+          text: "Config",
           items: [
-            { text: 'Configuring Fledge', link: '/config/' },
-            { text: 'Create Fledge stack(s)', link: '/config/create-stack/' },
+            { text: "Configuring Fledge", link: "/config/" },
+            { text: "Create Fledge stack(s)", link: "/config/create-stack/" },
           ],
         },
       ],
     },
 
-    socialLinks: [{ icon: 'github', link: 'https://github.com/schapka/fledge' }],
+    socialLinks: [
+      { icon: "github", link: "https://github.com/schapka/fledge" },
+    ],
   },
 });
