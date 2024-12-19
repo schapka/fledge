@@ -1,83 +1,25 @@
 {
   "name": "fledge",
-  "version": "0.0.2-next.10",
-  "description": "Project scaffolding",
-  "keywords": [
-    "scaffolding"
-  ],
-  "license": "MIT",
-  "homepage": "https://schapka.github.io/fledge",
-  "bugs": {
-    "url": "https://github.com/schapka/fledge/issues"
-  },
-  "author": "René Schapka",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/schapka/fledge.git"
-  },
-  "sideEffects": false,
+  "version": "1.0.0",
   "type": "module",
-  "exports": {
-    ".": {
-      "types": "./dist/main.d.ts",
-      "import": "./dist/main.mjs",
-      "require": "./dist/main.cjs"
-    }
-  },
-  "bin": {
-    "fledge": "dist/cli.mjs"
-  },
-  "main": "./dist/main.cjs",
-  "module": "./dist/main.mjs",
-  "types": "./dist/main.d.ts",
-  "files": [
-    "dist",
-    "assets",
-    "schema.json",
-    "README.md"
-  ],
-  "scripts": {
-    "prepare": "husky || true",
-    "lint": "eslint . --fix && prettier -w .",
-    "type-check": "tsc --noEmit",
-    "test": "vitest --run",
-    "build": "unbuild",
-    "postbuild": "tsx scripts/createSchemaFile.ts"
-  },
-  "devDependencies": {
-    "@commitlint/cli": "^19.6.1",
-    "@commitlint/config-conventional": "^19.6.0",
-    "@eslint/js": "^9.17.0",
-    "@types/eslint__js": "^8.42.3",
-    "@types/node": "^22.10.2",
-    "changelogen": "^0.5.7",
-    "eslint": "^9.17.0",
-    "husky": "^9.1.7",
-    "lint-staged": "^15.2.11",
-    "prettier": "^3.4.2",
-    "tsx": "^4.19.2",
-    "typescript": "^5.7.2",
-    "typescript-eslint": "^8.18.1",
-    "unbuild": "^3.0.1",
-    "vitest": "^2.1.8",
-    "zod-to-json-schema": "^3.24.1"
-  },
-  "dependencies": {
-    "@clack/prompts": "^0.8.2",
-    "c12": "^2.0.1",
-    "commander": "^12.1.0",
-    "execa": "^9.5.2",
-    "fast-glob": "^3.3.2",
-    "fastq": "^1.17.1",
-    "giget": "^1.2.3",
-    "isbinaryfile": "^5.0.4",
-    "rc9": "^2.1.2",
-    "scule": "^1.3.0",
-    "sisteransi": "^1.0.5",
-    "zod": "^3.24.1"
-  },
+  "private": true,
+  "sideEffects": false,
   "packageManager": "pnpm@9.7.0",
   "engines": {
     "node": ">=20.0.0"
+  },
+  "scripts": {
+    "docs:dev": "pnpm --filter=./fledge-docs run dev",
+    "type-check": "pnpm run -r type-check",
+    "lint": "pnpm run -r lint",
+    "prepare": "husky || true"
+  },
+  "devDependencies": {
+    "eslint": "9.17.0",
+    "husky": "9.1.7",
+    "typescript": "^5.7.2",
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
+    "@types/node": "^22.10.2"
   }
 }
