@@ -10,7 +10,7 @@ type Data = {
 
 function convertZodSchemaToString(
   schema: ZodTypeAny | typeof configSchema,
-  schemaTitle: string
+  schemaTitle: string,
 ) {
   const { node } = zodToTs(schema as ZodTypeAny, schemaTitle);
   return printNode(node);
