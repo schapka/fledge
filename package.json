@@ -9,11 +9,11 @@
     "node": ">=20.0.0"
   },
   "scripts": {
-    "docs:dev": "pnpm --filter=./fledge-docs run dev",
+    "docs:dev": "pnpm --filter=@fledge/docs run dev",
     "build": "pnpm -r run build",
     "type-check": "pnpm -r run type-check",
     "lint": "pnpm -r run lint",
-    "test": "pnpm -r test",
+    "test": "pnpm -r run test",
     "prepare": "husky || true"
   },
   "devDependencies": {
