@@ -1,18 +1,18 @@
-import eslint from '@eslint/js';
-import tseslint from 'typescript-eslint';
+import eslint from "@eslint/js";
+import tseslint from "typescript-eslint";
 
 export default tseslint.config(
   {
-    ignores: ['.vitepress/cache/*'],
+    ignores: [".vitepress/cache/*", ".vitepress/dist/*"],
   },
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
   {
     rules: {
-      '@typescript-eslint/no-unused-vars': [
-        'error',
+      "@typescript-eslint/no-unused-vars": [
+        "error",
         {
-          caughtErrorsIgnorePattern: '^_',
+          caughtErrorsIgnorePattern: "^_",
         },
       ],
     },
