@@ -1,5 +1,36 @@
 # Changelog
 
+## v0.0.2-next.11
+
+[compare changes](https://github.com/schapka/fledge/compare/v0.0.2-next.10...v0.0.2-next.11)
+
+### 📖 Documentation
+
+- Setup vitepress ([1c7e384](https://github.com/schapka/fledge/commit/1c7e384))
+- Set base for vitepress build ([85de611](https://github.com/schapka/fledge/commit/85de611))
+- Fix logo and image loading ([50127b6](https://github.com/schapka/fledge/commit/50127b6))
+- Fix social links ([0a093ec](https://github.com/schapka/fledge/commit/0a093ec))
+- Add home page content ([76bf9d5](https://github.com/schapka/fledge/commit/76bf9d5))
+- Fix broken link ([ecd004d](https://github.com/schapka/fledge/commit/ecd004d))
+
+### 🏡 Chore
+
+- Format ([9ee7199](https://github.com/schapka/fledge/commit/9ee7199))
+- Upgrade to node 22 (lts/jod) ([ffc6b23](https://github.com/schapka/fledge/commit/ffc6b23))
+- Upgrade to node 22 (lts/jod) ([957e7ff](https://github.com/schapka/fledge/commit/957e7ff))
+- Drop autofix action in favour of commit hooks ([aca29ba](https://github.com/schapka/fledge/commit/aca29ba))
+- Update dependencies ([136700d](https://github.com/schapka/fledge/commit/136700d))
+- Add pr action ([4bc66c6](https://github.com/schapka/fledge/commit/4bc66c6))
+- Add pr title validation to action ([38c8fe0](https://github.com/schapka/fledge/commit/38c8fe0))
+- Adds documentation for fledge ([45e9076](https://github.com/schapka/fledge/commit/45e9076))
+- Add favicon to asset directory ([a114dbf](https://github.com/schapka/fledge/commit/a114dbf))
+
+### ❤️ Contributors
+
+- René Schapka <rene.schapka@gmail.com>
+- Tobias Dossinger ([@tobiasdossinger](http://github.com/tobiasdossinger))
+- Autofix Bot ([@schapka](http://github.com/schapka))
+
 ## v0.0.2-next.10
 
 [compare changes](https://github.com/schapka/fledge/compare/v0.0.2-next.9...v0.0.2-next.10)
